@@ -1,0 +1,38 @@
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/Dev/.oh-my-zsh"
+
+ZSH_THEME="eastwood"
+plugins=(git colorize cp go brew osx)
+
+# User configuration
+
+export GOPATH=~/go
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:$GOPATH/bin
+
+
+source $ZSH/oh-my-zsh.sh
+
+curdate() {
+	printf "%s %s" $(date +%d.%m.%Y) $(date +%H:%M)
+}
+
+githubpaste() {
+	if [ -d .git ]; then
+		if [ -n "$(git status --porcelain)" ]; then
+			git add .
+			git commit -am "$(curdate)"
+			git push origin master
+		fi;
+	fi;
+}
+
+export SERVER="46.101.151.142"
+
+alias s="ssh root@$SERVER"
+alias p="cd ~/Projects"
+alias g="githubpaste; (cd ..; githubpaste)"
+alias l="ls -lh"
+alias ll="ls -lah"
+alias drd="diskutil unmountDisk disk2"
