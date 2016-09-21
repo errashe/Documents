@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/Dev/.oh-my-zsh"
+export ZSH="/Users/e4stw00d/.oh-my-zsh"
 
 ZSH_THEME="eastwood"
-plugins=(git colorize cp go brew osx)
+plugins=(git colorize cp go brew osx node npm ruby)
 
 # User configuration
 
@@ -10,6 +10,7 @@ export GOPATH=~/go
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:"/usr/local/sbin"
 
 
 source $ZSH/oh-my-zsh.sh
@@ -30,9 +31,11 @@ githubpaste() {
 
 export SERVER="46.101.151.142"
 
+alias c="clear"
 alias s="ssh root@$SERVER"
 alias p="cd ~/Projects"
 alias g="githubpaste; (cd ..; githubpaste)"
 alias l="ls -lh"
 alias ll="ls -lah"
 alias drd="diskutil unmountDisk disk2"
+alias workflow="go version&&ruby -v&&rails -v&&vim --version | awk 'NR==1; END{print}'"
