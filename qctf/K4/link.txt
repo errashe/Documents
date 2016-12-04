@@ -1,0 +1,2 @@
+$ ssh -p 50058 user@ettrw.contest.qctf.ru
+Password: dUMBEIZuHb

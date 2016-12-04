@@ -1,0 +1,5 @@
+http://learn.grouping-s.contest.qctf.ru/
+http://explore.grouping-s.contest.qctf.ru/
+http://destroy.grouping-s.contest.qctf.ru/
+
+https://grouping-s.contest.qctf.ru/
