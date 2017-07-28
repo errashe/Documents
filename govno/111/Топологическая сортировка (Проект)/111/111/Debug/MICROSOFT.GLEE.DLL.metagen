@@ -1,0 +1,937 @@
+ImageRuntimeVersion: v2.0.50727
+Assembly Microsoft.GLEE, Version=1.2.0.0, Culture=neutral, PublicKeyToken=7f84f738e1fc245c: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Microsoft.Glee.PolylinePointsCollection: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  Interfaces:
+    System.ICloneable
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Splines.Point]
+    System.Collections.IEnumerable
+  Methods:
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.IntEdge: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    Int32 Source 'get set' : 
+    Int32 Target 'get set' : 
+    Boolean Reversed 'get set' : 
+    Boolean Virtual 'get set' : 
+    Microsoft.Glee.Edge Edge 'get set' : 
+    Int32 Separation 'get set' : 
+  Methods:
+    get_Source(): PrivateScope, Public, HideBySig, SpecialName
+    set_Source(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Target(): PrivateScope, Public, HideBySig, SpecialName
+    set_Target(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Reversed(): PrivateScope, Public, HideBySig, SpecialName
+    set_Reversed(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Virtual(): PrivateScope, Public, HideBySig, SpecialName
+    set_Virtual(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Edge(): PrivateScope, Public, HideBySig, SpecialName
+    set_Edge(Edge): PrivateScope, Public, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Separation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Separation(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Ordering: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    Boolean BalanceGroups 'get set' : 
+    Int32 MaxOfIterations 'get set' : 
+  Methods:
+    get_BalanceGroups(): PrivateScope, Public, HideBySig, SpecialName
+    set_BalanceGroups(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxOfIterations(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxOfIterations(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Couple`2[A,B]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: A
+  Type parameter: B
+    Void .ctor(A, B): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    A First    'get set' : 
+    B Second   'get set' : 
+  Methods:
+    get_First(): PrivateScope, Public, HideBySig, SpecialName
+    set_First(A): PrivateScope, Public, HideBySig, SpecialName
+    get_Second(): PrivateScope, Public, HideBySig, SpecialName
+    set_Second(B): PrivateScope, Public, HideBySig, SpecialName
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Glee.DataBase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class Microsoft.Glee.GleeObject: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Properties:
+    System.Object UserData 'get set' : 
+  Events:
+    System.EventHandler`1[Microsoft.Glee.LayoutChangeEventArgs] LayoutChangeEvent: 
+  Methods:
+    get_UserData(): PrivateScope, Public, HideBySig, SpecialName
+    set_UserData(Object): PrivateScope, Public, HideBySig, SpecialName
+    add_LayoutChangeEvent(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_LayoutChangeEvent(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Edge: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Glee.GleeObject
+    Void .ctor(Microsoft.Glee.Node, Microsoft.Glee.Node, Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Glee.Node, Microsoft.Glee.Node): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Glee.Node Source 'get set' : 
+    Int32 SourceAnchorNumber 'get set' : 
+    Microsoft.Glee.Node Target 'get set' : 
+    Int32 TargetAnchorNumber 'get set' : 
+    Double LabelWidth 'get set' : 
+    Double LabelHeight 'get set' : 
+    Double EdgeThickness 'get set' : 
+    Boolean ArrowHeadAtSource 'get set' : 
+    Boolean ArrowHeadAtTarget 'get set' : 
+    Double ArrowHeadLength 'get set' : 
+    Int32 Weight 'get set' : 
+    Int32 Separation 'get set' : 
+    Microsoft.Glee.Splines.ICurve Curve 'get set' : 
+    Microsoft.Glee.PolylinePointsCollection UnderlyingPolyline 'get set' : 
+    Microsoft.Glee.Splines.Point LabelCenter 'get set' : 
+    Microsoft.Glee.Splines.Point ArrowHeadAtSourcePosition 'get set' : 
+    Microsoft.Glee.Splines.Point ArrowHeadAtTargetPosition 'get set' : 
+    Double LineWidth 'get set' : 
+  Methods:
+    get_Source(): PrivateScope, Public, HideBySig, SpecialName
+    set_Source(Node): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceAnchorNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_SourceAnchorNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Target(): PrivateScope, Public, HideBySig, SpecialName
+    set_Target(Node): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetAnchorNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_TargetAnchorNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_LabelWidth(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelHeight(): PrivateScope, Public, HideBySig, SpecialName
+    set_LabelHeight(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_EdgeThickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_EdgeThickness(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowHeadAtSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadAtSource(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowHeadAtTarget(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadAtTarget(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowHeadLength(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadLength(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Weight(): PrivateScope, Public, HideBySig, SpecialName
+    set_Weight(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Separation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Separation(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Curve(): PrivateScope, Public, HideBySig, SpecialName
+    set_Curve(ICurve): PrivateScope, Public, HideBySig, SpecialName
+    get_UnderlyingPolyline(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnderlyingPolyline(PolylinePointsCollection): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelCenter(): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowHeadAtSourcePosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadAtSourcePosition(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowHeadAtTargetPosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadAtTargetPosition(Point): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_LineWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_LineWidth(Double): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.LayoutChangeEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Glee.GleeGraph: AutoLayout, AnsiClass, Class, Public, Sealed, Serializable, BeforeFieldInit
+  :Microsoft.Glee.GleeObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean OptimizeLabelPositions 'get set' : 
+    Double AspectRatio 'get set' : 
+    Microsoft.Glee.Splines.PlaneTransformation Transformation 'get set' : 
+    Microsoft.Glee.Splines.Rectangle BoundingBox 'get set' : 
+    Double NodeSeparation 'get set' : 
+    Double LayerSeparation 'get set' : 
+    Double Margins 'get set' : 
+    Double MinNodeHeight 'get set' : 
+    Double MinNodeWidth 'get set' : 
+    Microsoft.Glee.GleeGraph Parent 'get set' : 
+    Boolean IsSubgraph 'get ' : 
+    Double Width 'get ' : 
+    Double Height 'get ' : 
+    Double Left 'get ' : 
+    Double Right 'get ' : 
+    Double Bottom 'get ' : 
+    Double Top 'get ' : 
+    Int32 NodeCount 'get ' : 
+    Int32 EdgeCount 'get ' : 
+    System.Collections.Generic.List`1[Microsoft.Glee.GleeGraph] Subgraphs 'get ' : 
+    System.Collections.Generic.Dictionary`2[System.String,Microsoft.Glee.Node] NodeMap 'get ' : 
+    System.Collections.Generic.List`1[Microsoft.Glee.Edge] Edges 'get ' : 
+  Methods:
+    get_OptimizeLabelPositions(): PrivateScope, Public, HideBySig, SpecialName
+    set_OptimizeLabelPositions(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AspectRatio(): PrivateScope, Public, HideBySig, SpecialName
+    set_AspectRatio(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Transformation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Transformation(PlaneTransformation): PrivateScope, Public, HideBySig, SpecialName
+    get_BoundingBox(): PrivateScope, Public, HideBySig, SpecialName
+    set_BoundingBox(Rectangle): PrivateScope, Public, HideBySig, SpecialName
+    get_NodeSeparation(): PrivateScope, Public, HideBySig, SpecialName
+    set_NodeSeparation(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_LayerSeparation(): PrivateScope, Public, HideBySig, SpecialName
+    set_LayerSeparation(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Margins(): PrivateScope, Public, HideBySig, SpecialName
+    set_Margins(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MinNodeHeight(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinNodeHeight(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MinNodeWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinNodeWidth(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Parent(): PrivateScope, Public, HideBySig, SpecialName
+    set_Parent(GleeGraph): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSubgraph(): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    get_Left(): PrivateScope, Public, HideBySig, SpecialName
+    get_Right(): PrivateScope, Public, HideBySig, SpecialName
+    get_Bottom(): PrivateScope, Public, HideBySig, SpecialName
+    get_Top(): PrivateScope, Public, HideBySig, SpecialName
+    AddNode(Node): PrivateScope, Public, HideBySig
+    FindNode(String): PrivateScope, Public, HideBySig
+    get_NodeCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_EdgeCount(): PrivateScope, Public, HideBySig, SpecialName
+    AddEdge(Edge): PrivateScope, Public, HideBySig
+    SetMinimalLayerNodes(Collection`1): PrivateScope, Public, HideBySig
+    SetMaximalLayerNodes(Collection`1): PrivateScope, Public, HideBySig
+    AddSameLayer(Collection`1): PrivateScope, Public, HideBySig
+    get_Subgraphs(): PrivateScope, Public, HideBySig, SpecialName
+    AddSubgraph(GleeGraph): PrivateScope, Public, HideBySig
+    get_NodeMap(): PrivateScope, Public, HideBySig, SpecialName
+    get_Edges(): PrivateScope, Public, HideBySig, SpecialName
+    CollectAllEdges(): PrivateScope, Public, HideBySig
+    CollectAllNodes(): PrivateScope, Public, HideBySig
+    CalculateLayout(): PrivateScope, Public, HideBySig
+    PrepareUndoDragData(): PrivateScope, Public, HideBySig
+    UndoDrag(): PrivateScope, Public, HideBySig
+Class Microsoft.Glee.NativeMethods: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Duration 'get ' : 
+    Int64 Frequency 'get ' : 
+  Methods:
+    Start(): PrivateScope, Public, HideBySig
+    Stop(): PrivateScope, Public, HideBySig
+    get_Duration(): PrivateScope, Public, HideBySig, SpecialName
+    get_Frequency(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.IntPair: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 X    'get set' : 
+    Int32 Y    'get set' : 
+  Methods:
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Int32): PrivateScope, Public, HideBySig, SpecialName
+    op_LessThan(IntPair, IntPair): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_GreaterThan(IntPair, IntPair): PrivateScope, Public, Static, HideBySig, SpecialName
+    Compare(IntPair, IntPair): PrivateScope, Public, Static, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Glee.Show: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(ICurve[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(ICurve[], AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.ShowWithColors: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(IEnumerable`1, IEnumerable`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(IEnumerable`1, IEnumerable`1, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.ShowDataBase: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(DataBase, ICurve[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(DataBase, ICurve[], AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Layout: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Properties:
+    Boolean Demotion 'get set' : 
+    Boolean RefineEllipseBoundary 'get set' : 
+    Int32 GroupSplit 'get set' : 
+    Boolean YankLabel 'get set' : 
+    Boolean InsertIntoEvenMultiEdge 'get set' : 
+    Double LabelCornersPreservCoefficient 'get set' : 
+    Double LabelWidthPreserveCoefficient 'get ' : 
+    Double SplineCalculationDuration 'get set' : 
+    Int32 BrandesThreshold 'get set' : 
+    Boolean Reporting 'get set' : 
+    System.String LogFileName 'get set' : 
+    Microsoft.Glee.Show Show 'get set' : 
+    Microsoft.Glee.ShowWithColors ShowWithColors 'get set' : 
+    Microsoft.Glee.ShowDataBase ShowDataBase 'get set' : 
+    Double SimplifyGapMultiplier 'get set' : 
+    Boolean SimplifyChannel 'get set' : 
+    Double Padding 'get set' : 
+  Methods:
+    get_Demotion(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Demotion(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_RefineEllipseBoundary(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_RefineEllipseBoundary(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_GroupSplit(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_GroupSplit(Int32): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_YankLabel(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_YankLabel(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_InsertIntoEvenMultiEdge(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_InsertIntoEvenMultiEdge(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LabelCornersPreservCoefficient(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_LabelCornersPreservCoefficient(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LabelWidthPreserveCoefficient(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SplineCalculationDuration(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SplineCalculationDuration(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_BrandesThreshold(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_BrandesThreshold(Int32): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Reporting(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Reporting(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    Report(String): PrivateScope, Public, Static, HideBySig
+    get_LogFileName(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_LogFileName(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Show(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Show(Show): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ShowWithColors(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_ShowWithColors(ShowWithColors): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ShowDataBase(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_ShowDataBase(ShowDataBase): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SimplifyGapMultiplier(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SimplifyGapMultiplier(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SimplifyChannel(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_SimplifyChannel(Boolean): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Padding(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Padding(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+Class Microsoft.Glee.Node: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Glee.GleeObject
+    Void .ctor(System.String, Microsoft.Glee.Splines.ICurve): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Id 'get set' : 
+    Double Padding 'get set' : 
+    Microsoft.Glee.Splines.ICurve BoundaryCurve 'get set' : 
+    Microsoft.Glee.Splines.ICurve MovedBoundaryCurve 'get set' : 
+    System.Collections.ObjectModel.Collection`1[Microsoft.Glee.Port] Ports 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Edge] InEdges 'get set' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Edge] OutEdges 'get set' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Edge] SelfEdges 'get set' : 
+    Microsoft.Glee.Splines.Point Center 'get set' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Double Width 'get ' : 
+    Double Height 'get ' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Padding(): PrivateScope, Public, HideBySig, SpecialName
+    set_Padding(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_BoundaryCurve(): PrivateScope, Public, HideBySig, SpecialName
+    set_BoundaryCurve(ICurve): PrivateScope, Public, HideBySig, SpecialName
+    get_MovedBoundaryCurve(): PrivateScope, Public, HideBySig, SpecialName
+    set_MovedBoundaryCurve(ICurve): PrivateScope, Public, HideBySig, SpecialName
+    CompareTo(Object): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Ports(): PrivateScope, Public, HideBySig, SpecialName
+    ClearPorts(): PrivateScope, Public, HideBySig
+    AddPorts(IEnumerable`1): PrivateScope, Public, HideBySig
+    get_InEdges(): PrivateScope, Public, HideBySig, SpecialName
+    set_InEdges(IEnumerable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_OutEdges(): PrivateScope, Public, HideBySig, SpecialName
+    set_OutEdges(IEnumerable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_SelfEdges(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelfEdges(IEnumerable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_Center(): PrivateScope, Public, HideBySig, SpecialName
+    set_Center(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_BBox(): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    PrepareUndoDragData(): PrivateScope, Public, HideBySig
+    UndoDrag(): PrivateScope, Public, HideBySig
+Class Microsoft.Glee.Anchor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double, Double, Double, Microsoft.Glee.Splines.ICurve): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double LeftAnchor 'get set' : 
+    Double RightAnchor 'get set' : 
+    Double TopAnchor 'get set' : 
+    Double BottomAnchor 'get set' : 
+    Double Left 'get ' : 
+    Double Right 'get ' : 
+    Double Top 'get ' : 
+    Double Bottom 'get ' : 
+    Microsoft.Glee.Splines.Point LeftTop 'get ' : 
+    Microsoft.Glee.Splines.Point LeftBottom 'get ' : 
+    Microsoft.Glee.Splines.Point RightBottom 'get ' : 
+    Microsoft.Glee.Splines.Point RightTop 'get ' : 
+    Double X   'get set' : 
+    Double Y   'get set' : 
+    Microsoft.Glee.Splines.Point Origin 'get ' : 
+    Boolean AlreadySitsOnASpline 'get set' : 
+    Double Width 'get ' : 
+    Double Height 'get ' : 
+    Boolean RepresentsLabel 'get set' : 
+    Microsoft.Glee.Splines.Curve PolygonalBoundary 'get set' : 
+    Double Padding 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_LeftAnchor(): PrivateScope, Public, HideBySig, SpecialName
+    set_LeftAnchor(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_RightAnchor(): PrivateScope, Public, HideBySig, SpecialName
+    set_RightAnchor(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_TopAnchor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopAnchor(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomAnchor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BottomAnchor(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Left(): PrivateScope, Public, HideBySig, SpecialName
+    get_Right(): PrivateScope, Public, HideBySig, SpecialName
+    get_Top(): PrivateScope, Public, HideBySig, SpecialName
+    get_Bottom(): PrivateScope, Public, HideBySig, SpecialName
+    get_LeftTop(): PrivateScope, Public, HideBySig, SpecialName
+    get_LeftBottom(): PrivateScope, Public, HideBySig, SpecialName
+    get_RightBottom(): PrivateScope, Public, HideBySig, SpecialName
+    get_RightTop(): PrivateScope, Public, HideBySig, SpecialName
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Origin(): PrivateScope, Public, HideBySig, SpecialName
+    get_AlreadySitsOnASpline(): PrivateScope, Public, HideBySig, SpecialName
+    set_AlreadySitsOnASpline(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    get_RepresentsLabel(): PrivateScope, Public, HideBySig, SpecialName
+    set_RepresentsLabel(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_PolygonalBoundary(): PrivateScope, Public, HideBySig, SpecialName
+    set_PolygonalBoundary(Curve): PrivateScope, Public, HideBySig, SpecialName
+    get_Padding(): PrivateScope, Public, HideBySig, SpecialName
+    set_Padding(Double): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Port: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Glee.Splines.Point Point 'get set' : 
+  Methods:
+    get_Point(): PrivateScope, Public, HideBySig, SpecialName
+    set_Point(Point): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Set`1[T]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: T
+  :System.MarshalByRefObject
+    Void .ctor(System.Collections.Generic.IEnumerable`1[T]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.ICollection`1[T]
+    System.Collections.Generic.IEnumerable`1[T]
+    System.Collections.IEnumerable
+  Properties:
+    Int32 Count 'get ' : 
+    Boolean IsReadOnly 'get ' : 
+  Methods:
+    Insert(T): PrivateScope, Public, HideBySig
+    Contains(T): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Delete(T): PrivateScope, Public, HideBySig
+    Remove(T): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Find(T): PrivateScope, Public, HideBySig
+    get_IsReadOnly(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CopyTo(T[], Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Clear(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clone(): PrivateScope, Public, HideBySig
+    ToArray(Type): PrivateScope, Public, HideBySig
+Class Microsoft.Glee.LayerEdge: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Glee.IntEdge
+Class Microsoft.Glee.Routing: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Fields:
+    Double PointSize = 1 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.NodeDragger: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Node] Nodes 'get ' : 
+    Boolean CanUndo 'get ' : 
+    Boolean CanRedo 'get ' : 
+  Methods:
+    Drag(Point): PrivateScope, Public, HideBySig
+    Add(Node): PrivateScope, Public, HideBySig
+    Remove(Node): PrivateScope, Public, HideBySig
+    get_Nodes(): PrivateScope, Public, HideBySig, SpecialName
+    get_CanUndo(): PrivateScope, Public, HideBySig, SpecialName
+    get_CanRedo(): PrivateScope, Public, HideBySig, SpecialName
+    PrepareForDragging(): PrivateScope, Public, HideBySig
+    Undo(): PrivateScope, Public, HideBySig
+    Redo(): PrivateScope, Public, HideBySig
+    Clear(): PrivateScope, Public, HideBySig
+Interface Microsoft.Glee.Splines.ICurve: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Microsoft.Glee.Splines.Point Item [Double] 'get ' : 
+    Microsoft.Glee.Splines.ParallelogramNodeOverICurve ParallelogramNodeOverICurve 'get ' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Double ParStart 'get ' : 
+    Double ParEnd 'get ' : 
+    Microsoft.Glee.Splines.Point Start 'get ' : 
+    Microsoft.Glee.Splines.Point End 'get ' : 
+    Double Length 'get ' : 
+  Methods:
+    get_Item(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    FirstDerivative(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SecondDerivative(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ThirdDerivative(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ParallelogramNodeOverICurve(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BBox(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ParStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ParEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Trim(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Move(Point): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Start(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_End(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Reverse(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OffsetCurve(Double, Point): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LengthPartial(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Transform(PlaneTransformation): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ClosestPoint(Point): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Clone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class Microsoft.Glee.Splines.BSpline: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(Microsoft.Glee.Splines.Point[], Double[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Glee.Splines.ICurve
+  Properties:
+    Int32 Degree 'get ' : 
+    Microsoft.Glee.Splines.Point Item [Double] 'get ' : 
+    Microsoft.Glee.Splines.ParallelogramNodeOverICurve ParallelogramNodeOverICurve 'get ' : 
+    Double ParStart 'get set' : 
+    Double ParEnd 'get set' : 
+    Microsoft.Glee.Splines.Point Start 'get ' : 
+    Microsoft.Glee.Splines.Point End 'get ' : 
+    Double Length 'get ' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+  Methods:
+    get_Degree(): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    FirstDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    SecondDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ThirdDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_ParallelogramNodeOverICurve(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ParStart(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParStart(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ParEnd(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParEnd(Double): PrivateScope, Public, HideBySig, SpecialName
+    Trim(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Move(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Start(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_End(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Reverse(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToBezier(): PrivateScope, Public, HideBySig
+    OffsetCurve(Double, Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LengthPartial(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Length(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BBox(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Transform(PlaneTransformation): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ClosestPoint(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Splines.CubicBezierSeg: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Glee.Splines.ICurve
+  Properties:
+    Microsoft.Glee.Splines.ParallelogramNodeOverICurve ParallelogramNodeOverICurve 'get ' : 
+    Microsoft.Glee.Splines.Point Item [Double] 'get ' : 
+    Microsoft.Glee.Splines.Point Start 'get ' : 
+    Microsoft.Glee.Splines.Point End 'get ' : 
+    Double ParStart 'get set' : 
+    Double ParEnd 'get set' : 
+    Double Length 'get ' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+  Methods:
+    B(Int32): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_ParallelogramNodeOverICurve(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Trim(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    FirstDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    SecondDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ThirdDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Start(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_End(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ParStart(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParStart(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ParEnd(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParEnd(Double): PrivateScope, Public, HideBySig, SpecialName
+    Reverse(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Move(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    OffsetCurve(Double, Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LengthPartial(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Length(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BBox(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Transform(PlaneTransformation): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ClosestPoint(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Splines.StopIntersect: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(IntersectionInfo): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(IntersectionInfo, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Splines.Curve: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Glee.Splines.ICurve
+  Properties:
+    Microsoft.Glee.Splines.Point Start 'get ' : 
+    Microsoft.Glee.Splines.Point End 'get ' : 
+    System.Collections.Generic.List`1[Microsoft.Glee.Splines.ICurve] Segs 'get ' : 
+    Microsoft.Glee.Splines.ParallelogramNodeOverICurve ParallelogramNodeOverICurve 'get ' : 
+    Double DistEps 'get set' : 
+    Double DistEpsSquare 'get ' : 
+    Double DistXEps 'get set' : 
+    Double LineSegTreshold 'get set' : 
+    Double Tolerance 'get set' : 
+    Microsoft.Glee.Splines.Parallelogram Box 'get set' : 
+    Microsoft.Glee.Splines.Point Item [Double] 'get ' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Double ParStart 'get set' : 
+    Double ParEnd 'get set' : 
+    Double Length 'get ' : 
+  Methods:
+    Interpolate(Double, Point, Double, Point, ICurve, Double): PrivateScope, Public, Static, HideBySig
+    Reverse(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Start(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_End(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Trim(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    AddSeg(ICurve): PrivateScope, Public, HideBySig
+    get_Segs(): PrivateScope, Public, HideBySig, SpecialName
+    get_ParallelogramNodeOverICurve(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CurveCurveIntersect(ICurve, ICurve, Boolean): PrivateScope, Public, Static, HideBySig
+    CurveCurveIntersect(ICurve, ICurve, StopIntersect, Boolean): PrivateScope, Public, Static, HideBySig
+    Close(Point, Point): PrivateScope, Public, Static, HideBySig
+    Close(Double, Double): PrivateScope, Public, Static, HideBySig
+    ToleranceClose(Double, Double): PrivateScope, Public, Static, HideBySig
+    CloseIntersections(Point, Point): PrivateScope, Public, Static, HideBySig
+    get_DistEps(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_DistEps(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DistEpsSquare(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DistXEps(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_DistXEps(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LineSegTreshold(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_LineSegTreshold(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Tolerance(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_Tolerance(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Box(): PrivateScope, Public, HideBySig, SpecialName
+    set_Box(Parallelogram): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    FirstDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    SecondDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ThirdDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    PointRelativeToCurveLocation(Point, ICurve): PrivateScope, Public, Static, HideBySig
+    RealCutWithClosedCurve(IntersectionInfo, Curve, Boolean): PrivateScope, Public, Static, HideBySig
+    RealCut(IntersectionInfo, Curve, Boolean): PrivateScope, Public, Static, HideBySig
+    OffsetCurve(Double, Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_BBox(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ClosestPoint(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_ParStart(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParStart(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ParEnd(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParEnd(Double): PrivateScope, Public, HideBySig, SpecialName
+    Move(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Transform(PlaneTransformation): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LengthPartial(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LengthWithInterpolation(ICurve): PrivateScope, Public, Static, HideBySig
+    get_Length(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Struct Microsoft.Glee.Splines.Curve+PointLocation: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    PointLocation Inside = 0 : Public, Static, Literal, HasDefault
+    PointLocation Outside = 1 : Public, Static, Literal, HasDefault
+    PointLocation Boundary = 2 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.Splines.CrossingOverlappingCurvesException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Microsoft.Glee.Splines.CurveFactory: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Methods:
+    CreateEllipse(Double, Double, Point): PrivateScope, Public, Static, HideBySig
+    CreateBox(Double, Double, Double, Double, Point): PrivateScope, Public, Static, HideBySig
+    CreateBox(Double, Double, Point): PrivateScope, Public, Static, HideBySig
+    CreateHouse(Double, Double, Point): PrivateScope, Public, Static, HideBySig
+    CreateInvHouse(Double, Double, Point): PrivateScope, Public, Static, HideBySig
+    CreateDiamond(Double, Double, Point): PrivateScope, Public, Static, HideBySig
+    CreateOctagon(Double, Double, Point): PrivateScope, Public, Static, HideBySig
+Class Microsoft.Glee.Splines.Ellipse: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(Double, Double, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Glee.Splines.ICurve
+  Properties:
+    Microsoft.Glee.Splines.Point Start 'get ' : 
+    Microsoft.Glee.Splines.Point End 'get ' : 
+    Microsoft.Glee.Splines.Point A 'get set' : 
+    Microsoft.Glee.Splines.Point B 'get set' : 
+    Microsoft.Glee.Splines.Point Center 'get set' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Microsoft.Glee.Splines.Point Item [Double] 'get ' : 
+    Microsoft.Glee.Splines.ParallelogramNodeOverICurve ParallelogramNodeOverICurve 'get ' : 
+    Double ParStart 'get set' : 
+    Double ParEnd 'get set' : 
+    Double Length 'get ' : 
+  Methods:
+    OffsetCurve(Double, Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Reverse(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Start(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_End(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Trim(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_A(): PrivateScope, Public, HideBySig, SpecialName
+    set_A(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_B(): PrivateScope, Public, HideBySig, SpecialName
+    set_B(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_Center(): PrivateScope, Public, HideBySig, SpecialName
+    set_Center(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_BBox(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    FirstDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    SecondDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ThirdDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_ParallelogramNodeOverICurve(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ParStart(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParStart(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ParEnd(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParEnd(Double): PrivateScope, Public, HideBySig, SpecialName
+    Move(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Transform(PlaneTransformation): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LengthPartial(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Length(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ClosestPoint(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Splines.IntersectionInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Double, Double, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.ICurve, Microsoft.Glee.Splines.ICurve): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Par0 'get set' : 
+    Double Par1 'get set' : 
+    Microsoft.Glee.Splines.Point X 'get set' : 
+    Microsoft.Glee.Splines.ICurve Seg0 'get ' : 
+    Microsoft.Glee.Splines.ICurve Seg1 'get ' : 
+  Methods:
+    get_Par0(): PrivateScope, Public, HideBySig, SpecialName
+    set_Par0(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Par1(): PrivateScope, Public, HideBySig, SpecialName
+    set_Par1(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_Seg0(): PrivateScope, Public, HideBySig, SpecialName
+    get_Seg1(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Microsoft.Glee.Splines.LineSeg: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Glee.Splines.Point, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Glee.Splines.ICurve
+  Properties:
+    Microsoft.Glee.Splines.Point A 'get set' : 
+    Microsoft.Glee.Splines.Point B 'get set' : 
+    Microsoft.Glee.Splines.Point Start 'get ' : 
+    Microsoft.Glee.Splines.Point End 'get ' : 
+    Double ParStart 'get set' : 
+    Double ParEnd 'get set' : 
+    Microsoft.Glee.Splines.ParallelogramNodeOverICurve ParallelogramNodeOverICurve 'get ' : 
+    Microsoft.Glee.Splines.Point Item [Double] 'get ' : 
+    Double Length 'get ' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+  Methods:
+    OffsetCurve(Double, Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_A(): PrivateScope, Public, HideBySig, SpecialName
+    set_A(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_B(): PrivateScope, Public, HideBySig, SpecialName
+    set_B(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_Start(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_End(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ParStart(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParStart(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ParEnd(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ParEnd(Double): PrivateScope, Public, HideBySig, SpecialName
+    Trim(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_ParallelogramNodeOverICurve(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    FirstDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    SecondDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ThirdDerivative(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Reverse(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Move(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Transform(PlaneTransformation): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    LengthPartial(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Length(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BBox(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ClosestPoint(Point): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Splines.MinDistCurveCurve: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Glee.Splines.ICurve, Microsoft.Glee.Splines.ICurve, Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct Microsoft.Glee.Splines.Parallelogram: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Area 'get ' : 
+  Methods:
+    op_Equality(Parallelogram, Parallelogram): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(Parallelogram, Parallelogram): PrivateScope, Public, Static, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Contains(Point): PrivateScope, Public, HideBySig
+    get_Area(): PrivateScope, Public, HideBySig, SpecialName
+    Vertex(VertexId): PrivateScope, Public, HideBySig
+    Intersect(Parallelogram, Parallelogram): PrivateScope, Public, Static, HideBySig
+Struct Microsoft.Glee.Splines.Parallelogram+VertexId: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    VertexId Corner = 0 : Public, Static, Literal, HasDefault
+    VertexId A = 1 : Public, Static, Literal, HasDefault
+    VertexId OtherCorner = 2 : Public, Static, Literal, HasDefault
+    VertexId B = 3 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.Splines.ParallelogramNode: AutoLayout, AnsiClass, Class, Public, Abstract, Serializable, BeforeFieldInit
+  Properties:
+    Microsoft.Glee.Splines.Parallelogram Parallelogram 'get set' : 
+  Methods:
+    get_Parallelogram(): PrivateScope, Public, HideBySig, SpecialName
+    set_Parallelogram(Parallelogram): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Splines.ParallelogramNodeOverICurve: AutoLayout, AnsiClass, Class, Public, Abstract, Serializable, BeforeFieldInit
+  :Microsoft.Glee.Splines.ParallelogramNode
+  Properties:
+    Microsoft.Glee.Splines.ICurve Seg 'get set' : 
+  Methods:
+    get_Seg(): PrivateScope, Public, HideBySig, SpecialName
+    set_Seg(ICurve): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Splines.PlaneTransformation: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double[][] Elements 'get set' : 
+    Double Item [Int32, Int32] 'get set' : 
+    Microsoft.Glee.Splines.PlaneTransformation Inverse 'get ' : 
+    Microsoft.Glee.Splines.PlaneTransformation I 'get ' : 
+    Boolean IsIdentity 'get ' : 
+    Microsoft.Glee.Splines.Point Offset 'get ' : 
+  Methods:
+    get_Elements(): PrivateScope, Public, HideBySig, SpecialName
+    set_Elements(Double[][]): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, Int32, Double): PrivateScope, Public, HideBySig, SpecialName
+    op_Multiply(PlaneTransformation, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    Multiply(PlaneTransformation, Point): PrivateScope, Public, Static, HideBySig
+    op_Multiply(PlaneTransformation, PlaneTransformation): PrivateScope, Public, Static, HideBySig, SpecialName
+    Multiply(PlaneTransformation, PlaneTransformation): PrivateScope, Public, Static, HideBySig
+    op_Division(PlaneTransformation, PlaneTransformation): PrivateScope, Public, Static, HideBySig, SpecialName
+    Divide(PlaneTransformation, PlaneTransformation): PrivateScope, Public, Static, HideBySig
+    get_Inverse(): PrivateScope, Public, HideBySig, SpecialName
+    get_I(): PrivateScope, Public, Static, HideBySig, SpecialName
+    Rotation(Double): PrivateScope, Public, Static, HideBySig
+    get_IsIdentity(): PrivateScope, Public, HideBySig, SpecialName
+    get_Offset(): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Glee.Splines.Point: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Length 'get ' : 
+    Double X   'get set' : 
+    Double Y   'get set' : 
+  Methods:
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    get_Length(): PrivateScope, Public, HideBySig, SpecialName
+    op_Equality(Point, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(Point, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_UnaryNegation(Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    Negate(): PrivateScope, Public, HideBySig
+    op_Addition(Point, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    Add(Point, Point): PrivateScope, Public, Static, HideBySig
+    op_Subtraction(Point, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    Subtract(Point, Point): PrivateScope, Public, Static, HideBySig
+    op_Multiply(Point, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    DotProduct(Point, Point): PrivateScope, Public, Static, HideBySig
+    op_Multiply(Double, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Multiply(Point, Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    Multiply(Double, Point): PrivateScope, Public, Static, HideBySig
+    Multiply(Point, Double): PrivateScope, Public, Static, HideBySig
+    op_Division(Point, Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Division(Double, Point): PrivateScope, Public, Static, HideBySig, SpecialName
+    Divide(Point, Double): PrivateScope, Public, Static, HideBySig
+    Divide(Double, Point): PrivateScope, Public, Static, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Double): PrivateScope, Public, HideBySig, SpecialName
+    Rotate(Double): PrivateScope, Public, HideBySig
+    Normalize(): PrivateScope, Public, HideBySig
+    Angle(Point, Point): PrivateScope, Public, Static, HideBySig
+    SignedDoubledTriangleArea(Point, Point, Point): PrivateScope, Public, Static, HideBySig
+    GetTriangleOrientation(Point, Point, Point): PrivateScope, Public, Static, HideBySig
+    ClosestPointOnSeg(Point, Point, Point): PrivateScope, Public, Static, HideBySig
+Struct Microsoft.Glee.Splines.TriangleOrientation: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Splines.TriangleOrientation Clockwise = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Splines.TriangleOrientation Counterclockwise = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Splines.TriangleOrientation Collinear = 2 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Splines.Rectangle: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Microsoft.Glee.Splines.Point, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double, Microsoft.Glee.Splines.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Glee.Splines.Rectangle, Microsoft.Glee.Splines.Rectangle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Left 'get set' : 
+    Double Right 'get set' : 
+    Double Top 'get set' : 
+    Double Bottom 'get set' : 
+    Microsoft.Glee.Splines.Point LeftBottom 'get ' : 
+    Microsoft.Glee.Splines.Point RightTop 'get ' : 
+    Microsoft.Glee.Splines.Point LeftTop 'get set' : 
+    Microsoft.Glee.Splines.Point RightBottom 'get set' : 
+    Double Width 'get set' : 
+    Boolean IsEmpty 'get ' : 
+    Double Height 'get set' : 
+    Double Area 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Intersect(Rectangle): PrivateScope, Public, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    CreateAnEmptyBox(): PrivateScope, Public, Static, HideBySig
+    get_Left(): PrivateScope, Public, HideBySig, SpecialName
+    set_Left(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Right(): PrivateScope, Public, HideBySig, SpecialName
+    set_Right(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Top(): PrivateScope, Public, HideBySig, SpecialName
+    set_Top(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Bottom(): PrivateScope, Public, HideBySig, SpecialName
+    set_Bottom(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_LeftBottom(): PrivateScope, Public, HideBySig, SpecialName
+    get_RightTop(): PrivateScope, Public, HideBySig, SpecialName
+    get_LeftTop(): PrivateScope, Public, HideBySig, SpecialName
+    set_LeftTop(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_RightBottom(): PrivateScope, Public, HideBySig, SpecialName
+    set_RightBottom(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_IsEmpty(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Double): PrivateScope, Public, HideBySig, SpecialName
+    Contains(Point, Double): PrivateScope, Public, HideBySig
+    get_Area(): PrivateScope, Public, HideBySig, SpecialName
+    Add(Point): PrivateScope, Public, HideBySig
+    Add(Rectangle): PrivateScope, Public, HideBySig
+    op_Equality(Rectangle, Rectangle): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(Rectangle, Rectangle): PrivateScope, Public, Static, HideBySig, SpecialName
+    Contains(Point): PrivateScope, Public, HideBySig

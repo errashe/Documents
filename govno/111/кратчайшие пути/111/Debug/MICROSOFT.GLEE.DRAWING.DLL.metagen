@@ -1,0 +1,960 @@
+ImageRuntimeVersion: v2.0.50727
+Assembly Microsoft.GLEE.Drawing, Version=1.2.0.0, Culture=neutral, PublicKeyToken=8a3d7c21d5fa1306: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.GLEE, Version=1.2.0.0, Culture=neutral, PublicKeyToken=7f84f738e1fc245c: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Microsoft.Glee.Drawing.BaseAttr: AutoLayout, AnsiClass, Class, Public, Abstract, Serializable, BeforeFieldInit
+  Properties:
+    Double PointSize 'get set' : 
+    System.Globalization.CultureInfo USCultureInfo 'get set' : 
+    Double LabelLeft 'get ' : 
+    Double LabelTop 'get ' : 
+    Double LabelRight 'get ' : 
+    Double LabelBottom 'get ' : 
+    Microsoft.Glee.Drawing.Size LabelSize 'get set' : 
+    Microsoft.Glee.Splines.Point LabelCenter 'get ' : 
+    Microsoft.Glee.Drawing.Color Color 'get set' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.Style] Styles 'get ' : 
+    System.String Id 'get set' : 
+    Int32 LineWidth 'get set' : 
+    Microsoft.Glee.Drawing.Color Fontcolor 'get set' : 
+    System.String FontName 'get set' : 
+    System.String Label 'get set' : 
+    Int32 Fontsize 'get set' : 
+    System.String DefaultFontName 'get set' : 
+    Double DefaultFontSize 'get set' : 
+  Methods:
+    get_PointSize(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_PointSize(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_USCultureInfo(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_USCultureInfo(CultureInfo): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LabelLeft(): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelTop(): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelRight(): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelBottom(): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LabelSize(Size): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LabelCenter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    AddStyle(Style): PrivateScope, Public, HideBySig
+    RemoveStyle(Style): PrivateScope, Public, HideBySig
+    ClearStyles(): PrivateScope, Public, HideBySig
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Styles(): PrivateScope, Public, HideBySig, SpecialName
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(String): PrivateScope, Public, HideBySig, SpecialName
+    get_LineWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_LineWidth(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Fontcolor(): PrivateScope, Public, HideBySig, SpecialName
+    set_Fontcolor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FontName(): PrivateScope, Public, HideBySig, SpecialName
+    set_FontName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Fontsize(): PrivateScope, Public, HideBySig, SpecialName
+    set_Fontsize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultFontName(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_DefaultFontName(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DefaultFontSize(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_DefaultFontSize(Double): PrivateScope, Public, Static, HideBySig, SpecialName
+Class Microsoft.Glee.Drawing.DrawingObject: AutoLayout, AnsiClass, Class, Public, Abstract, Serializable, BeforeFieldInit
+  Properties:
+    System.Object UserData 'get set' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Microsoft.Glee.GleeObject GleeObject 'get ' : 
+  Methods:
+    get_UserData(): PrivateScope, Public, HideBySig, SpecialName
+    set_UserData(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_BBox(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GleeObject(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class Microsoft.Glee.Drawing.Edge: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Glee.Drawing.DrawingObject
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Microsoft.Glee.Drawing.EdgeAttr Attr 'get set' : 
+    Microsoft.Glee.Drawing.EdgeAttr EdgeAttr 'get set' : 
+    System.String Source 'get ' : 
+    System.String Target 'get ' : 
+    Microsoft.Glee.Drawing.Node SourceNode 'get set' : 
+    Microsoft.Glee.Drawing.Node TargetNode 'get set' : 
+    Microsoft.Glee.GleeObject GleeObject 'get ' : 
+  Methods:
+    get_BBox(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Attr(): PrivateScope, Public, HideBySig, SpecialName
+    set_Attr(EdgeAttr): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_EdgeAttr(): PrivateScope, Public, HideBySig, SpecialName
+    set_EdgeAttr(EdgeAttr): PrivateScope, Public, HideBySig, SpecialName
+    get_Source(): PrivateScope, Public, HideBySig, SpecialName
+    get_Target(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceNode(): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetNode(): PrivateScope, Public, HideBySig, SpecialName
+    get_GleeObject(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class Microsoft.Glee.Drawing.EdgeAttr: AutoLayout, AnsiClass, Class, Public, Sealed, Serializable, BeforeFieldInit
+  :Microsoft.Glee.Drawing.BaseAttr
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Separation 'get set' : 
+    Microsoft.Glee.Splines.Point LabelCenter 'get ' : 
+    Microsoft.Glee.Drawing.Size LabelSize 'get ' : 
+    Int32 Weight 'get set' : 
+    Microsoft.Glee.Drawing.ArrowStyle ArrowHeadAtSource 'get set' : 
+    Microsoft.Glee.Drawing.ArrowStyle ArrowHeadAtTarget 'get set' : 
+    Single ArrowHeadLength 'get set' : 
+    Microsoft.Glee.Edge GleeEdge 'get set' : 
+    Microsoft.Glee.Splines.Point StartPoint 'get ' : 
+    Microsoft.Glee.Splines.Point EndPoint 'get ' : 
+    Microsoft.Glee.Splines.ICurve EdgeCurve 'get set' : 
+    Boolean ArrowAtTarget 'get ' : 
+    Microsoft.Glee.Splines.Point ArrowAtTargetPosition 'get set' : 
+    Boolean ArrowAtSource 'get ' : 
+    Microsoft.Glee.Splines.Point ArrowAtSourcePosition 'get set' : 
+  Methods:
+    get_Separation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Separation(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelCenter(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_LabelSize(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Weight(): PrivateScope, Public, HideBySig, SpecialName
+    set_Weight(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Clone(): PrivateScope, Public, HideBySig
+    get_ArrowHeadAtSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadAtSource(ArrowStyle): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowHeadAtTarget(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadAtTarget(ArrowStyle): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowHeadLength(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowHeadLength(Single): PrivateScope, Public, HideBySig, SpecialName
+    ToString(String): PrivateScope, Public, HideBySig
+    get_GleeEdge(): PrivateScope, Public, HideBySig, SpecialName
+    set_GleeEdge(Edge): PrivateScope, Public, HideBySig, SpecialName
+    get_StartPoint(): PrivateScope, Public, HideBySig, SpecialName
+    get_EndPoint(): PrivateScope, Public, HideBySig, SpecialName
+    get_EdgeCurve(): PrivateScope, Public, HideBySig, SpecialName
+    set_EdgeCurve(ICurve): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtTarget(): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtTargetPosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowAtTargetPosition(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtSource(): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtSourcePosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowAtSourcePosition(Point): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Glee.Drawing.Style: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.Style None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Dashed = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Solid = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Invis = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Bold = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Filled = 5 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Diagonals = 6 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Dotted = 7 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Style Rounded = 8 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.ArrowStyle: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.ArrowStyle NonSpecified = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.ArrowStyle None = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.ArrowStyle Normal = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.ArrowStyle Tee = 3 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.EdgeDirection: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.EdgeDirection NonSpecified = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.EdgeDirection Forward = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.EdgeDirection Back = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.EdgeDirection Both = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.EdgeDirection None = 4 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.Orientation: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.Orientation Portrait = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Orientation Landscape = 1 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.Layer: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.Layer Undefined = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Layer Same = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Layer Min = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Layer Max = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Layer Source = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Layer Sink = 5 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.Ratio: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.Ratio Fill = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Ratio Auto = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Ratio Compress = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Ratio Expand = 3 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.LabelJustification: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.LabelJustification Left = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LabelJustification Right = 1 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.LabelLocation: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.LabelLocation Top = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LabelLocation Bottom = 1 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.LabelFloat: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.LabelFloat None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LabelFloat Float = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LabelFloat Nonfloat = 2 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.Drawing.GleeMouseEventArgs: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :System.EventArgs
+  Properties:
+    Boolean LeftButtonIsPressed 'get ' : 
+    Boolean MiddleButtonIsPressed 'get ' : 
+    Boolean RightButtonIsPressed 'get ' : 
+    Boolean Handled 'get set' : 
+    Int32 X    'get ' : 
+    Int32 Y    'get ' : 
+  Methods:
+    get_LeftButtonIsPressed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MiddleButtonIsPressed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_RightButtonIsPressed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Handled(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Handled(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_X(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Y(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class Microsoft.Glee.Drawing.Graph: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Glee.Drawing.DrawingObject
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean NeedCalculateLayout 'get set' : 
+    Boolean BuildNodeHierarchy 'get set' : 
+    Double MinNodeHeight 'get set' : 
+    Double MinNodeWidth 'get set' : 
+    Microsoft.Glee.Drawing.Graph Parent 'get ' : 
+    Boolean IsSubgraph 'get ' : 
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Microsoft.Glee.Drawing.GraphAttr GraphAttr 'get set' : 
+    Double Width 'get ' : 
+    Double Height 'get ' : 
+    Double Left 'get ' : 
+    Double Top 'get ' : 
+    Double Bottom 'get ' : 
+    Double Right 'get ' : 
+    Int32 NodeCount 'get ' : 
+    Int32 EdgeCount 'get ' : 
+    System.Collections.IEnumerable MinLayer 'get set' : 
+    System.Collections.IEnumerable MaxLayer 'get set' : 
+    System.Collections.ArrayList Subgraphs 'get ' : 
+    System.Collections.ArrayList SameLayers 'get ' : 
+    System.Collections.Hashtable NodeMap 'get ' : 
+    System.Collections.ObjectModel.Collection`1[Microsoft.Glee.Drawing.Edge] Edges 'get ' : 
+    System.String Label 'get set' : 
+    Boolean Cluster 'get set' : 
+    Boolean Directed 'get set' : 
+    Microsoft.Glee.GleeGraph GleeGraph 'get set' : 
+    Microsoft.Glee.Drawing.NodeAttr SelectedNodeAttribute 'get set' : 
+    Microsoft.Glee.Drawing.EdgeAttr SelectedEdgeAttribute 'get set' : 
+    Microsoft.Glee.GleeObject GleeObject 'get ' : 
+  Methods:
+    get_NeedCalculateLayout(): PrivateScope, Public, HideBySig, SpecialName
+    set_NeedCalculateLayout(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BuildNodeHierarchy(): PrivateScope, Public, HideBySig, SpecialName
+    set_BuildNodeHierarchy(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MinNodeHeight(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinNodeHeight(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MinNodeWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinNodeWidth(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Parent(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSubgraph(): PrivateScope, Public, HideBySig, SpecialName
+    FixAttributes(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_BBox(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_GraphAttr(): PrivateScope, Public, HideBySig, SpecialName
+    set_GraphAttr(GraphAttr): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    get_Left(): PrivateScope, Public, HideBySig, SpecialName
+    get_Top(): PrivateScope, Public, HideBySig, SpecialName
+    get_Bottom(): PrivateScope, Public, HideBySig, SpecialName
+    get_Right(): PrivateScope, Public, HideBySig, SpecialName
+    AddNode(String): PrivateScope, Public, HideBySig
+    get_NodeCount(): PrivateScope, Public, HideBySig, SpecialName
+    EdgeById(String): PrivateScope, Public, HideBySig
+    get_EdgeCount(): PrivateScope, Public, HideBySig, SpecialName
+    AddEdge(String, String, String): PrivateScope, Public, HideBySig
+    FindNode(String): PrivateScope, Public, HideBySig
+    AddEdge(String, String): PrivateScope, Public, HideBySig
+    get_MinLayer(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinLayer(IEnumerable): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxLayer(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxLayer(IEnumerable): PrivateScope, Public, HideBySig, SpecialName
+    AddSameLayer(IEnumerable): PrivateScope, Public, HideBySig
+    get_Subgraphs(): PrivateScope, Public, HideBySig, SpecialName
+    AddSubgraph(Graph): PrivateScope, Public, HideBySig
+    get_SameLayers(): PrivateScope, Public, HideBySig, SpecialName
+    get_NodeMap(): PrivateScope, Public, HideBySig, SpecialName
+    get_Edges(): PrivateScope, Public, HideBySig, SpecialName
+    CreateCluster(String): PrivateScope, Public, Static, HideBySig
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    CreateCluster(GraphAttr, String): PrivateScope, Public, Static, HideBySig
+    CreateGraph(GraphAttr, Boolean, String): PrivateScope, Public, Static, HideBySig
+    CleanNodes(): PrivateScope, Public, HideBySig
+    get_Cluster(): PrivateScope, Public, HideBySig, SpecialName
+    set_Cluster(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Directed(): PrivateScope, Public, HideBySig, SpecialName
+    set_Directed(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_GleeGraph(): PrivateScope, Public, HideBySig, SpecialName
+    set_GleeGraph(GleeGraph): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedNodeAttribute(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedNodeAttribute(NodeAttr): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedEdgeAttribute(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedEdgeAttribute(EdgeAttr): PrivateScope, Public, HideBySig, SpecialName
+    get_GleeObject(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class Microsoft.Glee.Drawing.GraphAttr: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Glee.Drawing.BaseAttr
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double AspectRatio 'get set' : 
+    Int32 Border 'get set' : 
+    Boolean LabelAttachedToCorner 'get set' : 
+    Microsoft.Glee.Drawing.EdgeAttr EdgeAttr 'get set' : 
+    Microsoft.Glee.Drawing.LabelFloat LabelFloat 'get set' : 
+    Microsoft.Glee.Splines.Point LabelCenter 'get ' : 
+    Microsoft.Glee.Drawing.NodeAttr NodeAttr 'get set' : 
+    Microsoft.Glee.Drawing.Color Backgroundcolor 'get set' : 
+    Double Margin 'get set' : 
+    Boolean OptimizeLabelPositions 'get set' : 
+    Double MinNodeSep 'get ' : 
+    Double NodeSep 'get set' : 
+    Microsoft.Glee.Drawing.Orientation Orientation 'get set' : 
+    Microsoft.Glee.Drawing.LayerDirection LayerDirection 'get set' : 
+    Double LayerSep 'get set' : 
+    Double MinLayerSep 'get ' : 
+    Microsoft.Glee.Drawing.NodeAttr NodeAttribute 'get set' : 
+    Microsoft.Glee.Drawing.Color Fillcolor 'get set' : 
+  Methods:
+    get_AspectRatio(): PrivateScope, Public, HideBySig, SpecialName
+    set_AspectRatio(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    set_Border(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelAttachedToCorner(): PrivateScope, Public, HideBySig, SpecialName
+    set_LabelAttachedToCorner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_EdgeAttr(): PrivateScope, Public, HideBySig, SpecialName
+    set_EdgeAttr(EdgeAttr): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelFloat(): PrivateScope, Public, HideBySig, SpecialName
+    set_LabelFloat(LabelFloat): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelCenter(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_NodeAttr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NodeAttr(NodeAttr): PrivateScope, Public, HideBySig, SpecialName
+    ToString(String): PrivateScope, Public, HideBySig
+    get_Backgroundcolor(): PrivateScope, Public, HideBySig, SpecialName
+    set_Backgroundcolor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Margin(): PrivateScope, Public, HideBySig, SpecialName
+    set_Margin(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_OptimizeLabelPositions(): PrivateScope, Public, HideBySig, SpecialName
+    set_OptimizeLabelPositions(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MinNodeSep(): PrivateScope, Public, HideBySig, SpecialName
+    get_NodeSep(): PrivateScope, Public, HideBySig, SpecialName
+    set_NodeSep(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Orientation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Orientation(Orientation): PrivateScope, Public, HideBySig, SpecialName
+    get_LayerDirection(): PrivateScope, Public, HideBySig, SpecialName
+    set_LayerDirection(LayerDirection): PrivateScope, Public, HideBySig, SpecialName
+    get_LayerSep(): PrivateScope, Public, HideBySig, SpecialName
+    set_LayerSep(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MinLayerSep(): PrivateScope, Public, HideBySig, SpecialName
+    get_NodeAttribute(): PrivateScope, Public, HideBySig, SpecialName
+    set_NodeAttribute(NodeAttr): PrivateScope, Public, HideBySig, SpecialName
+    get_Fillcolor(): PrivateScope, Public, HideBySig, SpecialName
+    set_Fillcolor(Color): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Glee.Drawing.MouseButtons: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.MouseButtons None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.MouseButtons Left = 1048576 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.MouseButtons Right = 2097152 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.MouseButtons Middle = 4194304 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.MouseButtons XButton1 = 8388608 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.MouseButtons XButton2 = 16777216 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.Drawing.MouseAndKeysAnalyser: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(ModifierKeys, MouseButtons, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(ModifierKeys, MouseButtons, Boolean, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Drawing.DelegateForNode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(IDraggableNode): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(IDraggableNode, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Drawing.DelegateForEdge: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(IDraggableEdge): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(IDraggableEdge, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Microsoft.Glee.Drawing.NodeDragger: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Glee.Drawing.IEditViewer, Microsoft.Glee.Drawing.DelegateForEdge, Microsoft.Glee.Drawing.DelegateForEdge, Microsoft.Glee.Drawing.DelegateForNode, Microsoft.Glee.Drawing.DelegateForNode, Microsoft.Glee.Drawing.MouseAndKeysAnalyser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double MouseMoveThreshold 'get set' : 
+    Microsoft.Glee.Drawing.MouseButtons PressedMouseButtons 'get set' : 
+    Microsoft.Glee.Drawing.MouseAndKeysAnalyser ToggleEntity 'get set' : 
+    Microsoft.Glee.Drawing.DelegateForNode DecorateNodeForDragging 'get set' : 
+    Microsoft.Glee.Drawing.DelegateForEdge DecorateEdgeForDragging 'get set' : 
+    Microsoft.Glee.Drawing.DelegateForNode RemoveNodeDraggingDecorations 'get set' : 
+    Microsoft.Glee.Drawing.DelegateForEdge RemoveEdgeDraggingDecorations 'get set' : 
+  Methods:
+    get_MouseMoveThreshold(): PrivateScope, Public, HideBySig, SpecialName
+    set_MouseMoveThreshold(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_PressedMouseButtons(): PrivateScope, Public, HideBySig, SpecialName
+    set_PressedMouseButtons(MouseButtons): PrivateScope, Public, HideBySig, SpecialName
+    get_ToggleEntity(): PrivateScope, Public, HideBySig, SpecialName
+    set_ToggleEntity(MouseAndKeysAnalyser): PrivateScope, Public, HideBySig, SpecialName
+    get_DecorateNodeForDragging(): PrivateScope, Public, HideBySig, SpecialName
+    set_DecorateNodeForDragging(DelegateForNode): PrivateScope, Public, HideBySig, SpecialName
+    get_DecorateEdgeForDragging(): PrivateScope, Public, HideBySig, SpecialName
+    set_DecorateEdgeForDragging(DelegateForEdge): PrivateScope, Public, HideBySig, SpecialName
+    get_RemoveNodeDraggingDecorations(): PrivateScope, Public, HideBySig, SpecialName
+    set_RemoveNodeDraggingDecorations(DelegateForNode): PrivateScope, Public, HideBySig, SpecialName
+    get_RemoveEdgeDraggingDecorations(): PrivateScope, Public, HideBySig, SpecialName
+    set_RemoveEdgeDraggingDecorations(DelegateForEdge): PrivateScope, Public, HideBySig, SpecialName
+    Undo(): PrivateScope, Public, HideBySig
+    Redo(): PrivateScope, Public, HideBySig
+    Clear(): PrivateScope, Public, HideBySig
+Interface Microsoft.Glee.Drawing.IDraggableObject: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Microsoft.Glee.Drawing.DrawingObject DrawingObject 'get ' : 
+    Boolean SelectedForDragging 'get set' : 
+  Methods:
+    get_DrawingObject(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SelectedForDragging(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SelectedForDragging(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Microsoft.Glee.Drawing.IDraggableEdge: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Microsoft.Glee.Drawing.IDraggableObject
+  Properties:
+    Microsoft.Glee.Drawing.Edge Edge 'get ' : 
+    Microsoft.Glee.Drawing.IDraggableNode Source 'get ' : 
+    Microsoft.Glee.Drawing.IDraggableNode Target 'get ' : 
+  Methods:
+    get_Edge(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Source(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Target(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Microsoft.Glee.Drawing.IDraggableNode: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Microsoft.Glee.Drawing.IDraggableObject
+  Properties:
+    Microsoft.Glee.Drawing.Node Node 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableEdge] InEdges 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableEdge] OutEdges 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableEdge] SelfEdges 'get ' : 
+  Methods:
+    get_Node(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_InEdges(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_OutEdges(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SelfEdges(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SetStrokeFill(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Microsoft.Glee.Drawing.IEditViewer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Microsoft.Glee.Drawing.IDraggableObject ObjectUnderMouseCursor 'get ' : 
+    Microsoft.Glee.Drawing.ModifierKeys ModifierKeys 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableObject] Entities 'get ' : 
+    Double DpiX 'get ' : 
+    Double DpiY 'get ' : 
+  Events:
+    System.EventHandler`1[Microsoft.Glee.Drawing.GleeMouseEventArgs] MouseDown: 
+    System.EventHandler`1[Microsoft.Glee.Drawing.GleeMouseEventArgs] MouseMove: 
+    System.EventHandler`1[Microsoft.Glee.Drawing.GleeMouseEventArgs] MouseUp: 
+  Methods:
+    add_MouseDown(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_MouseDown(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    add_MouseMove(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_MouseMove(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    add_MouseUp(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_MouseUp(EventHandler`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ObjectUnderMouseCursor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Invalidate(IDraggableObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ModifierKeys(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ScreenToSource(GleeMouseEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Entities(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DpiX(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DpiY(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    OnDragEnd(IEnumerable`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct Microsoft.Glee.Drawing.ModifierKeys: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.ModifierKeys None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.ModifierKeys Alt = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.ModifierKeys Control = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.ModifierKeys Shift = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.ModifierKeys Windows = 8 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.Drawing.Node: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Glee.Drawing.DrawingObject
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Glee.Splines.Rectangle BBox 'get ' : 
+    Microsoft.Glee.Drawing.NodeAttr Attr 'get set' : 
+    System.String Id 'get set' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.Edge] OutEdges 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.Edge] InEdges 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.Edge] SelfEdges 'get ' : 
+    Microsoft.Glee.GleeObject GleeObject 'get ' : 
+  Methods:
+    get_BBox(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Attr(): PrivateScope, Public, HideBySig, SpecialName
+    set_Attr(NodeAttr): PrivateScope, Public, HideBySig, SpecialName
+    CompareTo(Object): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(String): PrivateScope, Public, HideBySig, SpecialName
+    get_OutEdges(): PrivateScope, Public, HideBySig, SpecialName
+    get_InEdges(): PrivateScope, Public, HideBySig, SpecialName
+    get_SelfEdges(): PrivateScope, Public, HideBySig, SpecialName
+    AddInEdge(Edge): PrivateScope, Public, HideBySig
+    AddOutEdge(Edge): PrivateScope, Public, HideBySig
+    AddSelfEdge(Edge): PrivateScope, Public, HideBySig
+    get_GleeObject(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class Microsoft.Glee.Drawing.NodeAttr: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :Microsoft.Glee.Drawing.BaseAttr
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Glee.Node GleeNode 'get set' : 
+    Double Padding 'get set' : 
+    Single XRad 'get set' : 
+    Single YRad 'get set' : 
+    Microsoft.Glee.Splines.Point LabelCenter 'get ' : 
+    Microsoft.Glee.Splines.Point Pos 'get ' : 
+    Microsoft.Glee.Drawing.Color DefaultFillColor 'get set' : 
+    Microsoft.Glee.Drawing.Color Fillcolor 'get set' : 
+    Double Height 'get ' : 
+    Microsoft.Glee.Drawing.Shape Shape 'get set' : 
+    Double Width 'get ' : 
+    Int32 LabelMargin 'get set' : 
+  Methods:
+    get_GleeNode(): PrivateScope, Public, HideBySig, SpecialName
+    set_GleeNode(Node): PrivateScope, Public, HideBySig, SpecialName
+    get_Padding(): PrivateScope, Public, HideBySig, SpecialName
+    set_Padding(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_XRad(): PrivateScope, Public, HideBySig, SpecialName
+    set_XRad(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_YRad(): PrivateScope, Public, HideBySig, SpecialName
+    set_YRad(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelCenter(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Pos(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, HideBySig
+    get_DefaultFillColor(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_DefaultFillColor(Color): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Fillcolor(): PrivateScope, Public, HideBySig, SpecialName
+    set_Fillcolor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    get_Shape(): PrivateScope, Public, HideBySig, SpecialName
+    set_Shape(Shape): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelMargin(): PrivateScope, Public, HideBySig, SpecialName
+    set_LabelMargin(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Drawing.PosData: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Microsoft.Glee.Splines.Point StartPoint 'get ' : 
+    Microsoft.Glee.Splines.Point EndPoint 'get ' : 
+    Microsoft.Glee.Splines.ICurve EdgeCurve 'get set' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Splines.Point] ControlPoints 'get ' : 
+    Boolean ArrowAtTarget 'get set' : 
+    Microsoft.Glee.Splines.Point ArrowAtTargetPosition 'get set' : 
+    Boolean ArrowAtSource 'get set' : 
+    Microsoft.Glee.Splines.Point ArrowAtSourcePosition 'get set' : 
+  Methods:
+    get_StartPoint(): PrivateScope, Public, HideBySig, SpecialName
+    get_EndPoint(): PrivateScope, Public, HideBySig, SpecialName
+    get_EdgeCurve(): PrivateScope, Public, HideBySig, SpecialName
+    set_EdgeCurve(ICurve): PrivateScope, Public, HideBySig, SpecialName
+    get_ControlPoints(): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtTarget(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowAtTarget(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtTargetPosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowAtTargetPosition(Point): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowAtSource(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrowAtSourcePosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrowAtSourcePosition(Point): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Glee.Drawing.Size: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single Width 'get set' : 
+    Single Height 'get set' : 
+  Methods:
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Single): PrivateScope, Public, HideBySig, SpecialName
+Struct Microsoft.Glee.Drawing.Color: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Byte, Byte, Byte, Byte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte, Byte, Byte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte A     'get set' : 
+    Byte R     'get set' : 
+    Byte G     'get set' : 
+    Byte B     'get set' : 
+    Microsoft.Glee.Drawing.Color AliceBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color AntiqueWhite 'get ' : 
+    Microsoft.Glee.Drawing.Color Aqua 'get ' : 
+    Microsoft.Glee.Drawing.Color Aquamarine 'get ' : 
+    Microsoft.Glee.Drawing.Color Azure 'get ' : 
+    Microsoft.Glee.Drawing.Color Beige 'get ' : 
+    Microsoft.Glee.Drawing.Color Bisque 'get ' : 
+    Microsoft.Glee.Drawing.Color Black 'get ' : 
+    Microsoft.Glee.Drawing.Color BlanchedAlmond 'get ' : 
+    Microsoft.Glee.Drawing.Color Blue 'get ' : 
+    Microsoft.Glee.Drawing.Color BlueViolet 'get ' : 
+    Microsoft.Glee.Drawing.Color Brown 'get ' : 
+    Microsoft.Glee.Drawing.Color BurlyWood 'get ' : 
+    Microsoft.Glee.Drawing.Color CadetBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color Chartreuse 'get ' : 
+    Microsoft.Glee.Drawing.Color Chocolate 'get ' : 
+    Microsoft.Glee.Drawing.Color Coral 'get ' : 
+    Microsoft.Glee.Drawing.Color CornflowerBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color Cornsilk 'get ' : 
+    Microsoft.Glee.Drawing.Color Crimson 'get ' : 
+    Microsoft.Glee.Drawing.Color Cyan 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkCyan 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkGoldenrod 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkGray 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkKhaki 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkMagenta 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkOliveGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkOrange 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkOrchid 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkRed 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkSalmon 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkSeaGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkSlateBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkSlateGray 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkTurquoise 'get ' : 
+    Microsoft.Glee.Drawing.Color DarkViolet 'get ' : 
+    Microsoft.Glee.Drawing.Color DeepPink 'get ' : 
+    Microsoft.Glee.Drawing.Color DeepSkyBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color DimGray 'get ' : 
+    Microsoft.Glee.Drawing.Color DodgerBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color Firebrick 'get ' : 
+    Microsoft.Glee.Drawing.Color FloralWhite 'get ' : 
+    Microsoft.Glee.Drawing.Color ForestGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color Fuchsia 'get ' : 
+    Microsoft.Glee.Drawing.Color Gainsboro 'get ' : 
+    Microsoft.Glee.Drawing.Color GhostWhite 'get ' : 
+    Microsoft.Glee.Drawing.Color Gold 'get ' : 
+    Microsoft.Glee.Drawing.Color Goldenrod 'get ' : 
+    Microsoft.Glee.Drawing.Color Gray 'get ' : 
+    Microsoft.Glee.Drawing.Color Green 'get ' : 
+    Microsoft.Glee.Drawing.Color GreenYellow 'get ' : 
+    Microsoft.Glee.Drawing.Color Honeydew 'get ' : 
+    Microsoft.Glee.Drawing.Color HotPink 'get ' : 
+    Microsoft.Glee.Drawing.Color IndianRed 'get ' : 
+    Microsoft.Glee.Drawing.Color Indigo 'get ' : 
+    Microsoft.Glee.Drawing.Color Ivory 'get ' : 
+    Microsoft.Glee.Drawing.Color Khaki 'get ' : 
+    Microsoft.Glee.Drawing.Color Lavender 'get ' : 
+    Microsoft.Glee.Drawing.Color LavenderBlush 'get ' : 
+    Microsoft.Glee.Drawing.Color LawnGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color LemonChiffon 'get ' : 
+    Microsoft.Glee.Drawing.Color LightBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color LightCoral 'get ' : 
+    Microsoft.Glee.Drawing.Color LightCyan 'get ' : 
+    Microsoft.Glee.Drawing.Color LightGoldenrodYellow 'get ' : 
+    Microsoft.Glee.Drawing.Color LightGray 'get ' : 
+    Microsoft.Glee.Drawing.Color LightGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color LightPink 'get ' : 
+    Microsoft.Glee.Drawing.Color LightSalmon 'get ' : 
+    Microsoft.Glee.Drawing.Color LightSeaGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color LightSkyBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color LightSlateGray 'get ' : 
+    Microsoft.Glee.Drawing.Color LightSteelBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color LightYellow 'get ' : 
+    Microsoft.Glee.Drawing.Color Lime 'get ' : 
+    Microsoft.Glee.Drawing.Color LimeGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color Linen 'get ' : 
+    Microsoft.Glee.Drawing.Color Magenta 'get ' : 
+    Microsoft.Glee.Drawing.Color Maroon 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumAquamarine 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumOrchid 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumPurple 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumSeaGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumSlateBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumSpringGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumTurquoise 'get ' : 
+    Microsoft.Glee.Drawing.Color MediumVioletRed 'get ' : 
+    Microsoft.Glee.Drawing.Color MidnightBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color MintCream 'get ' : 
+    Microsoft.Glee.Drawing.Color MistyRose 'get ' : 
+    Microsoft.Glee.Drawing.Color Moccasin 'get ' : 
+    Microsoft.Glee.Drawing.Color NavajoWhite 'get ' : 
+    Microsoft.Glee.Drawing.Color Navy 'get ' : 
+    Microsoft.Glee.Drawing.Color OldLace 'get ' : 
+    Microsoft.Glee.Drawing.Color Olive 'get ' : 
+    Microsoft.Glee.Drawing.Color OliveDrab 'get ' : 
+    Microsoft.Glee.Drawing.Color Orange 'get ' : 
+    Microsoft.Glee.Drawing.Color OrangeRed 'get ' : 
+    Microsoft.Glee.Drawing.Color Orchid 'get ' : 
+    Microsoft.Glee.Drawing.Color PaleGoldenrod 'get ' : 
+    Microsoft.Glee.Drawing.Color PaleGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color PaleTurquoise 'get ' : 
+    Microsoft.Glee.Drawing.Color PaleVioletRed 'get ' : 
+    Microsoft.Glee.Drawing.Color PapayaWhip 'get ' : 
+    Microsoft.Glee.Drawing.Color PeachPuff 'get ' : 
+    Microsoft.Glee.Drawing.Color Peru 'get ' : 
+    Microsoft.Glee.Drawing.Color Pink 'get ' : 
+    Microsoft.Glee.Drawing.Color Plum 'get ' : 
+    Microsoft.Glee.Drawing.Color PowderBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color Purple 'get ' : 
+    Microsoft.Glee.Drawing.Color Red 'get ' : 
+    Microsoft.Glee.Drawing.Color RosyBrown 'get ' : 
+    Microsoft.Glee.Drawing.Color RoyalBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color SaddleBrown 'get ' : 
+    Microsoft.Glee.Drawing.Color Salmon 'get ' : 
+    Microsoft.Glee.Drawing.Color SandyBrown 'get ' : 
+    Microsoft.Glee.Drawing.Color SeaGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color SeaShell 'get ' : 
+    Microsoft.Glee.Drawing.Color Sienna 'get ' : 
+    Microsoft.Glee.Drawing.Color Silver 'get ' : 
+    Microsoft.Glee.Drawing.Color SkyBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color SlateBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color SlateGray 'get ' : 
+    Microsoft.Glee.Drawing.Color Snow 'get ' : 
+    Microsoft.Glee.Drawing.Color SpringGreen 'get ' : 
+    Microsoft.Glee.Drawing.Color SteelBlue 'get ' : 
+    Microsoft.Glee.Drawing.Color Tan 'get ' : 
+    Microsoft.Glee.Drawing.Color Teal 'get ' : 
+    Microsoft.Glee.Drawing.Color Thistle 'get ' : 
+    Microsoft.Glee.Drawing.Color Tomato 'get ' : 
+    Microsoft.Glee.Drawing.Color Transparent 'get ' : 
+    Microsoft.Glee.Drawing.Color Turquoise 'get ' : 
+    Microsoft.Glee.Drawing.Color Violet 'get ' : 
+    Microsoft.Glee.Drawing.Color Wheat 'get ' : 
+    Microsoft.Glee.Drawing.Color White 'get ' : 
+    Microsoft.Glee.Drawing.Color WhiteSmoke 'get ' : 
+    Microsoft.Glee.Drawing.Color Yellow 'get ' : 
+    Microsoft.Glee.Drawing.Color YellowGreen 'get ' : 
+  Methods:
+    get_LightSalmon(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightSeaGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightSkyBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightSlateGray(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightSteelBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightYellow(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Lime(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LimeGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Linen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Magenta(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Maroon(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumAquamarine(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumOrchid(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumPurple(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumSeaGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumSlateBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumSpringGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumTurquoise(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MediumVioletRed(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MidnightBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MintCream(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_MistyRose(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Moccasin(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_NavajoWhite(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Navy(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_OldLace(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Olive(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_OliveDrab(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Orange(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_OrangeRed(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Orchid(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PaleGoldenrod(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PaleGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PaleTurquoise(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PaleVioletRed(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PapayaWhip(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PeachPuff(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Peru(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Pink(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Plum(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_PowderBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Purple(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Red(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_RosyBrown(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_RoyalBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SaddleBrown(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Salmon(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SandyBrown(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SeaGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SeaShell(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Sienna(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Silver(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SkyBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SlateBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SlateGray(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Snow(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SpringGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SteelBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Tan(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Teal(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Thistle(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Tomato(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Transparent(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Turquoise(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Violet(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Wheat(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_White(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_WhiteSmoke(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Yellow(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_YellowGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    get_A(): PrivateScope, Public, HideBySig, SpecialName
+    set_A(Byte): PrivateScope, Public, HideBySig, SpecialName
+    get_R(): PrivateScope, Public, HideBySig, SpecialName
+    set_R(Byte): PrivateScope, Public, HideBySig, SpecialName
+    get_G(): PrivateScope, Public, HideBySig, SpecialName
+    set_G(Byte): PrivateScope, Public, HideBySig, SpecialName
+    get_B(): PrivateScope, Public, HideBySig, SpecialName
+    set_B(Byte): PrivateScope, Public, HideBySig, SpecialName
+    op_Equality(Color, Color): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(Color, Color): PrivateScope, Public, Static, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_AliceBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_AntiqueWhite(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Aqua(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Aquamarine(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Azure(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Beige(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Bisque(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Black(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_BlanchedAlmond(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Blue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_BlueViolet(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Brown(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_BurlyWood(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_CadetBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Chartreuse(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Chocolate(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Coral(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_CornflowerBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Cornsilk(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Crimson(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Cyan(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkCyan(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkGoldenrod(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkGray(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkKhaki(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkMagenta(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkOliveGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkOrange(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkOrchid(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkRed(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkSalmon(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkSeaGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkSlateBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkSlateGray(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkTurquoise(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DarkViolet(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DeepPink(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DeepSkyBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DimGray(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DodgerBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Firebrick(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_FloralWhite(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ForestGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Fuchsia(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Gainsboro(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_GhostWhite(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Gold(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Goldenrod(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Gray(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Green(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_GreenYellow(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Honeydew(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_HotPink(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IndianRed(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Indigo(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Ivory(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Khaki(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Lavender(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LavenderBlush(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LawnGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LemonChiffon(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightBlue(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightCoral(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightCyan(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightGoldenrodYellow(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightGray(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightGreen(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_LightPink(): PrivateScope, Public, Static, HideBySig, SpecialName
+Struct Microsoft.Glee.Drawing.LayerDirection: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.LayerDirection TB = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LayerDirection LR = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LayerDirection BT = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LayerDirection RL = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.LayerDirection None = 4 : Public, Static, Literal, HasDefault
+Struct Microsoft.Glee.Drawing.Shape: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.Drawing.Shape None = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Diamond = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Ellipse = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Box = 3 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Circle = 4 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Record = 5 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Plaintext = 6 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Point = 7 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Mdiamond = 8 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Msquare = 9 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Polygon = 10 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape DoubleCircle = 11 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape House = 12 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape InvHouse = 13 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Parallelogram = 14 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Octagon = 15 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape TripleOctagon = 16 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Triangle = 17 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.Drawing.Shape Trapezium = 18 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.Drawing.GraphVizNotInstalledException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Exception E 'get set' : 
+  Methods:
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    get_E(): PrivateScope, Public, HideBySig, SpecialName
+    set_E(Exception): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.Drawing.NodeBoundaryCurves: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Methods:
+    GetNodeBoundaryCurve(Node, Double, Double): PrivateScope, Public, Static, HideBySig

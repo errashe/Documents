@@ -1,0 +1,193 @@
+  Microsoft.Glee.GraphViewerGdi.GViewer.resources - Embedded, ContainedInManifestFile, 
+  Microsoft.Glee.GraphViewerGdi.SaveViewForm.resources - Embedded, ContainedInManifestFile, 
+  Microsoft.Glee.GraphViewerGdi.hmove.cur - Embedded, ContainedInManifestFile, 
+  Microsoft.Glee.GraphViewerGdi.oph.cur - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v2.0.50727
+Assembly Microsoft.Glee.GraphViewerGDI, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fffc27ea4058b3a1: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.GLEE.Drawing, Version=1.2.0.0, Culture=neutral, PublicKeyToken=8a3d7c21d5fa1306: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly Microsoft.GLEE, Version=1.2.0.0, Culture=neutral, PublicKeyToken=7f84f738e1fc245c: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Microsoft.Glee.GraphViewerGdi.ViewerMouseEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Glee.Drawing.GleeMouseEventArgs
+    Void .ctor(System.Windows.Forms.MouseEventArgs): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean LeftButtonIsPressed 'get ' : 
+    Boolean MiddleButtonIsPressed 'get ' : 
+    Boolean RightButtonIsPressed 'get ' : 
+    Boolean Handled 'get set' : 
+    Int32 X    'get ' : 
+    Int32 Y    'get ' : 
+  Methods:
+    get_LeftButtonIsPressed(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_MiddleButtonIsPressed(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_RightButtonIsPressed(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Handled(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Handled(Boolean): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_X(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class Microsoft.Glee.GraphViewerGdi.ObjectWithBox: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+Class Microsoft.Glee.GraphViewerGdi.DObject: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :Microsoft.Glee.GraphViewerGdi.ObjectWithBox
+  Properties:
+    Boolean SelectedForDragging 'get set' : 
+  Methods:
+    get_SelectedForDragging(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SelectedForDragging(Boolean): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Microsoft.Glee.GraphViewerGdi.DNode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Microsoft.Glee.GraphViewerGdi.DObject
+  Interfaces:
+    Microsoft.Glee.Drawing.IDraggableNode
+    Microsoft.Glee.Drawing.IDraggableObject
+  Properties:
+    System.Drawing.Color Color 'get set' : 
+    System.Drawing.Color FillColor 'get set' : 
+    Microsoft.Glee.Drawing.Node Node 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableEdge] InEdges 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableEdge] OutEdges 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableEdge] SelfEdges 'get ' : 
+    Microsoft.Glee.Drawing.DrawingObject DrawingObject 'get ' : 
+  Methods:
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FillColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FillColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    SetStrokeFill(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Node(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_InEdges(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_OutEdges(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SelfEdges(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DrawingObject(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Microsoft.Glee.GraphViewerGdi.Draw: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Methods:
+    GleeColorToDrawingColor(Color): PrivateScope, Public, Static, HideBySig
+    DrawPrecalculatedLayoutObject(Graphics, Object): PrivateScope, Public, Static, HideBySig
+Class Microsoft.Glee.GraphViewerGdi.GraphRenderer: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(Microsoft.Glee.Drawing.Graph): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CalculateLayout(): PrivateScope, Public, HideBySig
+    Render(Image): PrivateScope, Public, HideBySig
+    Render(Graphics, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Render(Graphics, Rectangle): PrivateScope, Public, HideBySig
+Class Microsoft.Glee.GraphViewerGdi.GViewer: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Windows.Forms.UserControl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Microsoft.Glee.Drawing.IEditViewer
+  Properties:
+    System.Windows.Forms.Control DrawingPanel 'get ' : 
+    Boolean NavigationVisible 'get set' : 
+    Boolean SaveButtonVisible 'get set' : 
+    System.Drawing.Brush OutsideAreaBrush 'get set' : 
+    System.Object SelectedObject 'get ' : 
+    Boolean ForwardEnabled 'get set' : 
+    Boolean BackwardEnabled 'get set' : 
+    Microsoft.Glee.Drawing.Graph Graph 'get set' : 
+    Boolean AsyncLayout 'get set' : 
+    Boolean PanButtonPressed 'get set' : 
+    Double ZoomWindowThreshold 'get set' : 
+    Double MouseHitDistance 'get set' : 
+    Microsoft.Glee.Drawing.Graph GraphWithLayout 'get ' : 
+    Microsoft.Glee.Drawing.IDraggableObject ObjectUnderMouseCursor 'get ' : 
+    System.Collections.Generic.IEnumerable`1[Microsoft.Glee.Drawing.IDraggableObject] Entities 'get ' : 
+    Double DpiX 'get ' : 
+    Double DpiY 'get ' : 
+    Double ZoomFraction 'get set' : 
+    Double GraphWidth 'get ' : 
+    Double GraphHeight 'get ' : 
+    Double ZoomF 'get set' : 
+  Events:
+    System.EventHandler SelectionChanged: 
+    System.EventHandler`1[Microsoft.Glee.GraphViewerGdi.LayoutProgressEventArgs] AsyncLayoutProgress: 
+  Methods:
+    ShowGroup(Object[]): PrivateScope, Public, HideBySig
+    CenterToGroup(Object[]): PrivateScope, Public, HideBySig
+    ShowBBox(Rectangle): PrivateScope, Public, HideBySig
+    Pan(Double, Double): PrivateScope, Public, HideBySig
+    Pan(Point): PrivateScope, Public, HideBySig
+    CenterToPoint(Double, Double): PrivateScope, Public, HideBySig
+    CenterToPoint(Point): PrivateScope, Public, HideBySig
+    GetObjectAt(Int32, Int32): PrivateScope, Public, HideBySig
+    GetObjectAt(Point): PrivateScope, Public, HideBySig
+    ZoomInPressed(): PrivateScope, Public, HideBySig
+    ZoomOutPressed(): PrivateScope, Public, HideBySig
+    SaveButtonPressed(): PrivateScope, Public, HideBySig
+    ForwardButtonPressed(): PrivateScope, Public, HideBySig
+    BackwardButtonPressed(): PrivateScope, Public, HideBySig
+    PrintButtonPressed(): PrivateScope, Public, HideBySig
+    get_PanButtonPressed(): PrivateScope, Public, HideBySig, SpecialName
+    set_PanButtonPressed(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    OnKey(KeyEventArgs): PrivateScope, Public, HideBySig
+    get_ZoomWindowThreshold(): PrivateScope, Public, HideBySig, SpecialName
+    set_ZoomWindowThreshold(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MouseHitDistance(): PrivateScope, Public, HideBySig, SpecialName
+    set_MouseHitDistance(Double): PrivateScope, Public, HideBySig, SpecialName
+    CalculateLayout(Graph): PrivateScope, Public, HideBySig
+    SetToolTip(ToolTip, String): PrivateScope, Public, HideBySig
+    SetCalculatedLayout(Object): PrivateScope, Public, HideBySig
+    get_GraphWithLayout(): PrivateScope, Public, HideBySig, SpecialName
+    ScreenToSource(Single, Single, Single&(Out), Single&(Out)): PrivateScope, Public, HideBySig
+    Pan(Single, Single): PrivateScope, Public, HideBySig
+    get_ObjectUnderMouseCursor(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Invalidate(IDraggableObject): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ScreenToSource(GleeMouseEventArgs): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Entities(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DpiX(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DpiY(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    OnDragEnd(IEnumerable`1): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_ZoomFraction(): PrivateScope, Public, HideBySig, SpecialName
+    set_ZoomFraction(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphWidth(): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphHeight(): PrivateScope, Public, HideBySig, SpecialName
+    get_ZoomF(): PrivateScope, Public, HideBySig, SpecialName
+    set_ZoomF(Double): PrivateScope, Public, HideBySig, SpecialName
+    RemoveToolbar(): PrivateScope, Public, HideBySig
+    get_DrawingPanel(): PrivateScope, Public, HideBySig, SpecialName
+    get_NavigationVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_NavigationVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SaveButtonVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_SaveButtonVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    add_SelectionChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_SelectionChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    get_OutsideAreaBrush(): PrivateScope, Public, HideBySig, SpecialName
+    set_OutsideAreaBrush(Brush): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedObject(): PrivateScope, Public, HideBySig, SpecialName
+    get_ForwardEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_ForwardEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BackwardEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackwardEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Graph(): PrivateScope, Public, HideBySig, SpecialName
+    set_Graph(Graph): PrivateScope, Public, HideBySig, SpecialName
+    add_AsyncLayoutProgress(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_AsyncLayoutProgress(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    get_AsyncLayout(): PrivateScope, Public, HideBySig, SpecialName
+    set_AsyncLayout(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    AbortAsyncLayout(): PrivateScope, Public, HideBySig
+Struct Microsoft.Glee.GraphViewerGdi.LayoutProgress: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Microsoft.Glee.GraphViewerGdi.LayoutProgress Layouting = 0 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.GraphViewerGdi.LayoutProgress Rendering = 1 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.GraphViewerGdi.LayoutProgress Finished = 2 : Public, Static, Literal, HasDefault
+    Microsoft.Glee.GraphViewerGdi.LayoutProgress Aborted = 3 : Public, Static, Literal, HasDefault
+Class Microsoft.Glee.GraphViewerGdi.LayoutProgressEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+  Properties:
+    Microsoft.Glee.GraphViewerGdi.LayoutProgress Progress 'get ' : 
+    System.String Diagnostics 'get ' : 
+  Methods:
+    get_Progress(): PrivateScope, Public, HideBySig, SpecialName
+    get_Diagnostics(): PrivateScope, Public, HideBySig, SpecialName
+Class Microsoft.Glee.GraphViewerGdi.GraphPrinting: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Drawing.Printing.PrintDocument
+    Void .ctor(Microsoft.Glee.GraphViewerGdi.GViewer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
